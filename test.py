@@ -24,16 +24,16 @@ def main(session):
     # The robot tries to provocate an emotion by greeting you
     tts.say("You look great today !")
     # The robot will try to analysis your reaction during the next 3 seconds
-    print moodService.getEmotionalReaction()
+    print(moodService.getEmotionalReaction())
 
     moodService.unsubscribe("Tutorial_RecordMood")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ip", type=str, default="127.0.0.1",
+    parser.add_argument("--ip", type=str, default="10.0.0.17",
                         help="Robot IP address. On robot or Local Naoqi: use '127.0.0.1'.")
-    parser.add_argument("--port", type=int, default=9559,
+    parser.add_argument("--port", type=int, default=9503,
                         help="Naoqi port number")
 
     args = parser.parse_args()
